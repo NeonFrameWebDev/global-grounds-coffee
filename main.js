@@ -2,39 +2,46 @@
   'use strict';
 
   const nav = document.getElementById('nav');
-  const navLinks = document.getElementById('navLinks');
   const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const progress = document.getElementById('progress');
 
   function onScroll() {
     const y = window.scrollY || window.pageYOffset;
-    if (y > 40) nav.classList.add('nav--scrolled');
-    else nav.classList.remove('nav--scrolled');
+    const docH = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    if (progress) progress.style.width = (y / docH * 100) + '%';
+    if (nav) {
+      if (y > 20) nav.style.boxShadow = '0 1px 0 rgba(0,0,0,0.08)';
+      else nav.style.boxShadow = '';
+    }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
   function closeMenu() {
-    navLinks.classList.remove('open');
+    if (!mobileMenu || !burger) return;
+    mobileMenu.classList.remove('open');
     burger.classList.remove('open');
     burger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   }
   function openMenu() {
-    navLinks.classList.add('open');
+    if (!mobileMenu || !burger) return;
+    mobileMenu.classList.add('open');
     burger.classList.add('open');
     burger.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   }
-  if (burger && navLinks) {
+  if (burger && mobileMenu) {
     burger.addEventListener('click', function () {
-      if (navLinks.classList.contains('open')) closeMenu();
+      if (mobileMenu.classList.contains('open')) closeMenu();
       else openMenu();
     });
-    navLinks.querySelectorAll('a').forEach(function (link) {
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', closeMenu);
     });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && navLinks.classList.contains('open')) closeMenu();
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
     });
   }
 
@@ -60,34 +67,9 @@
         }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.rise, .menu-cat').forEach(function (el) { observer.observe(el); });
-
-    const counters = document.querySelectorAll('.stat__num[data-count]');
-    if (counters.length) {
-      const counterObs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          counterObs.unobserve(entry.target);
-          const target = parseFloat(entry.target.getAttribute('data-count')) || 0;
-          const suffix = entry.target.getAttribute('data-suffix') || '';
-          const prefix = entry.target.getAttribute('data-prefix') || '';
-          const decimals = (entry.target.getAttribute('data-decimals') || '0') | 0;
-          const dur = 1400;
-          const start = performance.now();
-          function tick(now) {
-            const t = Math.min(1, (now - start) / dur);
-            const eased = 1 - Math.pow(1 - t, 3);
-            const val = target * eased;
-            entry.target.textContent = prefix + (decimals ? val.toFixed(decimals) : Math.round(val)) + suffix;
-            if (t < 1) requestAnimationFrame(tick);
-          }
-          requestAnimationFrame(tick);
-        });
-      }, { threshold: 0.5 });
-      counters.forEach(function (c) { counterObs.observe(c); });
-    }
+    document.querySelectorAll('.rise').forEach(function (el) { observer.observe(el); });
   } else {
-    document.querySelectorAll('.rise, .menu-cat').forEach(function (el) { el.classList.add('visible'); });
+    document.querySelectorAll('.rise').forEach(function (el) { el.classList.add('visible'); });
   }
 
   const prefersReduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -110,4 +92,10 @@
     }, { passive: true });
     updateParallax();
   }
+
+  // Duplicate marquee children so the CSS -50% loop is seamless
+  document.querySelectorAll('.marquee__track').forEach(function (track) {
+    const kids = Array.from(track.children);
+    kids.forEach(function (k) { track.appendChild(k.cloneNode(true)); });
+  });
 })();

@@ -9,55 +9,64 @@
 <link rel="preload" as="image" href="images/storefront_sign.webp" fetchpriority="high" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="is-visit">
 
+<div class="progress" id="progress"></div>
+
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a href="index.html" class="nav__brand" aria-label="Global Grounds Coffee home">
-      <span class="nav__brand-script">global</span>
-      <span class="nav__brand-block">Grounds</span>
-    </a>
-    <nav class="nav__links" id="navLinks">
-      <a href="index.html">Home</a>
+    <div class="nav__left">
       <a href="menu.html">Menu</a>
       <a href="about.html">About</a>
-      <a href="visit.html" class="nav__cta active">Visit</a>
-    </nav>
+    </div>
+    <a href="index.html" class="nav__brand" aria-label="Global Grounds Coffee home">
+      <span class="nav__brand-script">global</span>
+      <span class="nav__brand-block">Grounds Coffee</span>
+    </a>
+    <div class="nav__right">
+      <a href="visit.html" class="active">Visit</a>
+      <a href="https://www.doordash.com/en/store/global-grounds-coffee-la-crosse-824665/" target="_blank" rel="noopener">Order</a>
+    </div>
     <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
+<aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="about.html">About</a>
+  <a href="visit.html" class="active">Visit</a>
+  <a href="https://www.doordash.com/en/store/global-grounds-coffee-la-crosse-824665/" target="_blank" rel="noopener">Order</a>
+</aside>
+
 <main>
 
 <section class="hero hero--compact" id="hero">
   <div class="hero__bg" style="background-image: url('images/storefront_sign.webp')" aria-hidden="true"></div>
   <div class="hero__inner">
-    <p class="hero__tagline">Come sit a while.</p>
-    <div class="hero__logo-mark">
-      <span class="hero__logo-block">Visit</span>
-    </div>
-    <p class="hero__sub">1808 State Street &middot; La Crosse, Wisconsin</p>
+    <p class="hero__meta">
+      <span>No. 04</span>
+      <span>1808 State Street</span>
+      <span>La Crosse, WI 54601</span>
+    </p>
+    <h1 class="hero__headline"><em>Come</em><br>Sit Awhile.</h1>
+    <p class="hero__tagline">Window seats, leather chairs, more plants than you can count. Free Wi-Fi. Bring a book.</p>
   </div>
 </section>
 
-<section class="section section--cream rise" id="hours">
+<section class="section section--paper rise" id="visit-body">
   <div class="section__inner">
-    <div class="section__head">
-      <p class="eyebrow">Hours</p>
-      <h2>Open every day.</h2>
-      <p class="section__lede">Six-thirty mornings Monday through Friday. Later-sleep weekends. We close earlier on Saturday and Sunday so the baristas can go have a life.</p>
-    </div>
-    <div style="max-width: 540px; margin: 0 auto;">
-      <div class="hours">
-        <h3>This Week</h3>
-        <div class="hours__grid">
+    <p class="section-num">No. 01 &nbsp; Hours &amp; Contact</p>
+    <div class="editorial">
+      <div class="editorial__copy">
+        <div class="hours">
           <div class="hours__row">
             <span class="hours__day">Monday</span>
             <span class="hours__time">6:30 to 5</span>
@@ -87,68 +96,68 @@
             <span class="hours__time">7:30 to 4</span>
           </div>
         </div>
-        <p class="hours__foot">Hours can shift seasonally, call to confirm</p>
+        <p class="hours__note">Hours can shift seasonally, call to confirm</p>
+      </div>
+      <div class="address-block">
+        <h2>1808<br>State Street.</h2>
+        <a href="tel:6087876590" class="phone">(608) 787-6590</a>
+        <div class="address-block__meta">
+          La Crosse, WI 54601<br>
+          Open seven days a week<br>
+          Free Wi-Fi, reusable mug discount
+        </div>
+        <div style="margin-top: 2rem;">
+          <a href="https://www.google.com/maps/place/1808+State+St,+La+Crosse,+WI+54601" target="_blank" rel="noopener" class="btn btn--ink">Open in Maps</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--cream-deep rise" id="good-to-know">
+<section class="section section--paper-soft rise" id="good-to-know">
   <div class="section__inner">
-    <div class="section__head">
-      <p class="eyebrow">Good to Know</p>
-      <h2>A few things worth saying.</h2>
-    </div>
-    <ul class="know">
-      <li>Sit-in cafe with window seats, leather armchairs, and plenty of plants</li>
-      <li>Free Wi-Fi, outlets around most tables</li>
-      <li>Order at the counter, we bring it to you</li>
+    <p class="section-num">No. 02 &nbsp; Good to Know</p>
+    <ol class="know">
+      <li>Sit in cafe, window seats, leather armchairs, hanging plants throughout</li>
+      <li>Free Wi-Fi, outlets near most tables</li>
+      <li>Order at the counter, we bring it to your seat</li>
       <li>Reusable mug discount, bring your own cup</li>
-      <li>DoorDash, Clover, and in-store ordering all available</li>
-      <li>Cultural art on the walls rotates, feel free to ask about the artists</li>
+      <li>DoorDash, Clover, and in store ordering all available</li>
+      <li>Cultural art on the walls rotates, ask about the artists</li>
       <li>Parking on State Street, look for the storefront with the cursive sign</li>
-    </ul>
+    </ol>
   </div>
 </section>
 
 </main>
 
-<section class="map" id="map">
-  <div class="map__inner">
-    <div class="map__copy">
-      <p class="eyebrow eyebrow--terracotta">Find Us</p>
-      <h2>1808 State Street</h2>
-      <p>On State between 18th and 19th, about a block from Losey. Look for the brown sign with the cursive "global" on it.</p>
-      <div class="map__details">
-        La Crosse, WI 54601<br>
-        <a href="tel:6087876590">(608) 787-6590</a><br>
-        Open seven days a week
-      </div>
-      <a href="https://www.google.com/maps/place/1808+State+St,+La+Crosse,+WI+54601" target="_blank" rel="noopener" class="btn btn--terracotta">Open in Google Maps</a>
-    </div>
-    <div class="map__embed">
-      <iframe
-        src="https://www.google.com/maps?q=1808+State+St,+La+Crosse,+WI+54601&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Map to Global Grounds Coffee"></iframe>
-    </div>
-  </div>
-</section>
+<div class="map">
+  <iframe
+    src="https://www.google.com/maps?q=1808+State+St,+La+Crosse,+WI+54601&output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Map to Global Grounds Coffee"></iframe>
+</div>
 
 <footer class="foot">
   <div class="foot__inner">
-    <span class="foot__brand-script">global</span>
-    <span class="foot__brand-block">Grounds Coffee</span>
-    <p class="foot__tag">Think global, drink local &middot; Since 2010</p>
-    <div class="foot__social">
+    <div>
+      <span class="foot__brand-script">global</span><br>
+      <span class="foot__brand-block">Grounds Coffee</span>
+    </div>
+    <div class="foot__links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="visit.html">Visit</a>
       <a href="https://www.facebook.com/globalgroundslax/" target="_blank" rel="noopener">Facebook</a>
       <a href="https://www.instagram.com/globalgroundslax/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.doordash.com/en/store/global-grounds-coffee-la-crosse-824665/" target="_blank" rel="noopener">Order</a>
-      <a href="https://www.google.com/maps/place/1808+State+St,+La+Crosse,+WI+54601" target="_blank" rel="noopener">Directions</a>
     </div>
-    <p class="foot__copy">&copy; 2026 Global Grounds Coffee. All rights reserved.</p>
-    <p class="foot__credit">Site by <a href="https://neonframewebdesign.com" target="_blank" rel="noopener">NeonFrame Web Design</a></p>
+    <div class="foot__legal">
+      <span>&copy; 2026 Global Grounds</span>
+      <span>Site by <a href="https://neonframewebdesign.com" target="_blank" rel="noopener">NeonFrame</a></span>
+    </div>
   </div>
 </footer>
 

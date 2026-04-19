@@ -9,178 +9,336 @@
 <link rel="preload" as="image" href="images/food_cup_bowl.webp" fetchpriority="high" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="is-menu">
 
+<div class="progress" id="progress"></div>
+
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a href="index.html" class="nav__brand" aria-label="Global Grounds Coffee home">
-      <span class="nav__brand-script">global</span>
-      <span class="nav__brand-block">Grounds</span>
-    </a>
-    <nav class="nav__links" id="navLinks">
-      <a href="index.html">Home</a>
+    <div class="nav__left">
       <a href="menu.html" class="active">Menu</a>
       <a href="about.html">About</a>
-      <a href="visit.html" class="nav__cta">Visit</a>
-    </nav>
+    </div>
+    <a href="index.html" class="nav__brand" aria-label="Global Grounds Coffee home">
+      <span class="nav__brand-script">global</span>
+      <span class="nav__brand-block">Grounds Coffee</span>
+    </a>
+    <div class="nav__right">
+      <a href="visit.html">Visit</a>
+      <a href="https://www.doordash.com/en/store/global-grounds-coffee-la-crosse-824665/" target="_blank" rel="noopener">Order</a>
+    </div>
     <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
+<aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="index.html">Home</a>
+  <a href="menu.html" class="active">Menu</a>
+  <a href="about.html">About</a>
+  <a href="visit.html">Visit</a>
+  <a href="https://www.doordash.com/en/store/global-grounds-coffee-la-crosse-824665/" target="_blank" rel="noopener">Order</a>
+</aside>
+
 <main>
 
 <section class="hero hero--compact" id="hero">
   <div class="hero__bg" style="background-image: url('images/food_cup_bowl.webp')" aria-hidden="true"></div>
   <div class="hero__inner">
-    <p class="hero__tagline">Something for your morning, something for your afternoon.</p>
-    <div class="hero__logo-mark">
-      <span class="hero__logo-block">The Menu</span>
-    </div>
-    <p class="hero__sub">Coffee &middot; Tea &middot; Smoothies &middot; Pastries</p>
+    <p class="hero__meta">
+      <span>No. 02</span>
+      <span>The Menu</span>
+      <span>Coffee, Tea, Food</span>
+    </p>
+    <h1 class="hero__headline">The <em>Menu.</em></h1>
+    <p class="hero__tagline">Coffee, tea, smoothies, pastries. Made one cup, one plate at a time.</p>
   </div>
 </section>
 
-<section class="section section--cream" id="lineup">
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span class="marquee__item">Black Tea</span>
+    <span class="marquee__item">Green Tea</span>
+    <span class="marquee__item">Herbal</span>
+    <span class="marquee__item">Boba</span>
+    <span class="marquee__item">Espresso</span>
+    <span class="marquee__item">Cold Brew</span>
+    <span class="marquee__item">Smoothies</span>
+    <span class="marquee__item">Scones, Bagels, Danishes</span>
+  </div>
+</div>
+
+<section class="section section--paper" id="lineup">
   <div class="section__inner">
 
-    <div class="menu-note">
-      Prices are posted in the cafe and on DoorDash. Our menu rotates with the seasons and with whatever Thippi just brought in. Call us at <a href="tel:6087876590" style="color: var(--terracotta-deep); font-weight: 700;">(608) 787-6590</a> for today's board.
+    <p class="menu-note">
+      Prices are posted in the cafe and on DoorDash. Our menu rotates seasonally and with whatever Thippi just brought in. Call <a href="tel:6087876590">(608) 787-6590</a> for today's board.
+    </p>
+
+    <div class="menu-group" id="signatures">
+      <div class="menu-group__head">
+        <span class="menu-group__num">No. 01</span>
+        <h2 class="menu-group__name">Signature Drinks</h2>
+        <span class="menu-group__script">house favorites</span>
+      </div>
+      <ul class="menu-list">
+        <li class="menu-row">
+          <h3 class="menu-row__name">Iced Lavender Matcha</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Whisked ceremonial matcha, a whisper of lavender, iced and pale jade.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Salted Cream Cold Brew</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Slow steeped Bean Juice beans capped with a silky salted cream.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Iced Caramel Macchiato</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Bean Juice espresso, vanilla, a slow ribbon of caramel over ice.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">PB Banana Espresso</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Peanut butter, banana, oat milk, two shots blended cold. Breakfast in a cup.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Chai with Cinnamon</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Spiced chai, steamed milk, a heavy shake of fresh cinnamon.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Classic Boba</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Pick a tea, pick a milk, add tapioca pearls. The Dim Sum inheritance.</p>
+        </li>
+      </ul>
     </div>
 
-    <div class="menu-cat" id="signatures">
-      <div class="menu-cat__head">
-        <h2>Signature Drinks</h2>
-        <span class="script">house favorites</span>
+    <div class="menu-group" id="coffee">
+      <div class="menu-group__head">
+        <span class="menu-group__num">No. 02</span>
+        <h2 class="menu-group__name">Coffee</h2>
+        <span class="menu-group__script">beans from Bean Juice</span>
       </div>
-      <p class="menu-cat__intro">The drinks regulars order without looking at the board.</p>
-      <div class="drink-grid">
-        <article class="drink-card"><p class="drink-card__cat">Tea Latte</p><h3>Iced Lavender Matcha</h3><p class="drink-card__style">matcha, lavender syrup, milk</p><p class="drink-card__notes">Whisked ceremonial matcha, a whisper of lavender, iced and pale jade.</p></article>
-        <article class="drink-card"><p class="drink-card__cat">Cold Brew</p><h3>Salted Cream Cold Brew</h3><p class="drink-card__style">cold brew, salted cream</p><p class="drink-card__notes">Slow-steeped Bean Juice beans capped with a silky salted cream.</p></article>
-        <article class="drink-card"><p class="drink-card__cat">Espresso</p><h3>Iced Caramel Macchiato</h3><p class="drink-card__style">double shot, milk, house caramel</p><p class="drink-card__notes">Bean Juice espresso, vanilla, a slow ribbon of caramel over ice.</p></article>
-        <article class="drink-card"><p class="drink-card__cat">Smoothie</p><h3>PB Banana Espresso</h3><p class="drink-card__style">peanut butter, banana, double shot</p><p class="drink-card__notes">Breakfast in a cup. Oat milk, peanut butter, banana, two shots.</p></article>
-        <article class="drink-card"><p class="drink-card__cat">Tea</p><h3>Chai with Cinnamon</h3><p class="drink-card__style">spiced chai, steamed milk, cinnamon</p><p class="drink-card__notes">Hot or iced, topped with a heavy shake of fresh cinnamon.</p></article>
-        <article class="drink-card"><p class="drink-card__cat">Boba</p><h3>Classic Boba</h3><p class="drink-card__style">tea of your choice, tapioca pearls</p><p class="drink-card__notes">Pick a tea, pick a milk, add boba. The Dim Sum inheritance.</p></article>
-      </div>
+      <ul class="menu-list">
+        <li class="menu-row">
+          <h3 class="menu-row__name">Drip Coffee</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Today's roast, brewed by the pot.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Pour Over</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Single cup V60, made to order, a touch slower.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Espresso</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Double shot, clean and bright.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Americano</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Double shot, hot water, no fuss.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Latte</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Double shot, steamed milk, light foam. Vanilla, caramel, or hazelnut on request.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Cappuccino</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Equal parts espresso, steamed milk, and foam.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Mocha</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Double shot, house chocolate, steamed milk.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Cortado</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Short, punchy, no sugar needed.</p>
+        </li>
+      </ul>
     </div>
 
-    <div class="menu-cat" id="coffee">
-      <div class="menu-cat__head">
-        <h2>Coffee</h2>
-        <span class="script">beans from Bean Juice</span>
+    <div class="menu-group" id="tea">
+      <div class="menu-group__head">
+        <span class="menu-group__num">No. 03</span>
+        <h2 class="menu-group__name">Tea</h2>
+        <span class="menu-group__script">80 plus loose leaf</span>
       </div>
-      <p class="menu-cat__intro">Small batch roasted in La Crosse, pulled on a La Marzocco, served the way you want it.</p>
-      <div class="drink-grid">
-        <article class="drink-card"><h3>Drip Coffee</h3><p class="drink-card__notes">Today's roast, brewed by the pot.</p></article>
-        <article class="drink-card"><h3>Pour Over</h3><p class="drink-card__notes">Single-cup V60, made to order, a touch slower.</p></article>
-        <article class="drink-card"><h3>Espresso</h3><p class="drink-card__notes">Double shot, clean and bright.</p></article>
-        <article class="drink-card"><h3>Americano</h3><p class="drink-card__notes">Double shot, hot water, no fuss.</p></article>
-        <article class="drink-card"><h3>Latte</h3><p class="drink-card__notes">Double shot, steamed milk, light foam. Vanilla, caramel, or hazelnut on request.</p></article>
-        <article class="drink-card"><h3>Cappuccino</h3><p class="drink-card__notes">Equal parts espresso, steamed milk, and foam.</p></article>
-        <article class="drink-card"><h3>Mocha</h3><p class="drink-card__notes">Double shot, house chocolate, steamed milk.</p></article>
-        <article class="drink-card"><h3>Cortado</h3><p class="drink-card__notes">Short, punchy, no sugar needed.</p></article>
-      </div>
+      <ul class="menu-list">
+        <li class="menu-row">
+          <h3 class="menu-row__name">Black Tea</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">English Breakfast, Earl Grey, Assam, Darjeeling. A few smoky single origins on rotation.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Green Tea</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Sencha, Dragon Well, Gunpowder, Jasmine Pearls. Ceremonial matcha on request.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Herbal &amp; Rooibos</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Chamomile, Peppermint, Lavender, Lemon Ginger, Vanilla Rooibos. Caffeine free.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Boba</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Pick any tea, add tapioca pearls, choose your milk.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Specialty</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Pu-erh, Oolong, White Peony, seasonal blends. Ask and we will brew to your taste.</p>
+        </li>
+      </ul>
+      <p class="menu-note">
+        The full list of more than 80 teas lives on the chalkboard inside the shop. Our staff loves to talk tea.
+      </p>
     </div>
 
-    <div class="menu-cat" id="tea">
-      <div class="menu-cat__head">
-        <h2>Tea</h2>
-        <span class="script">80 plus loose leaf</span>
+    <div class="menu-group" id="smoothies">
+      <div class="menu-group__head">
+        <span class="menu-group__num">No. 04</span>
+        <h2 class="menu-group__name">Smoothies &amp; Bowls</h2>
+        <span class="menu-group__script">real fruit, no powders</span>
       </div>
-      <p class="menu-cat__intro">The tea wall came from Dim Sum Tea Shop when it merged into Global Grounds in 2021. What follows is just a taste of the categories.</p>
-      <div class="tea-grid">
-        <article class="tea-card">
-          <p class="tea-card__letter">B</p>
-          <h3>Black</h3>
-          <p>English Breakfast, Earl Grey, Assam, Darjeeling, plus a few smoky single origins.</p>
-        </article>
-        <article class="tea-card">
-          <p class="tea-card__letter">G</p>
-          <h3>Green</h3>
-          <p>Sencha, Dragon Well, Gunpowder, Jasmine Pearls, plus a ceremonial-grade matcha we use in the latte.</p>
-        </article>
-        <article class="tea-card">
-          <p class="tea-card__letter">H</p>
-          <h3>Herbal &amp; Rooibos</h3>
-          <p>Chamomile, Peppermint, Lavender, Lemon Ginger, Vanilla Rooibos. Caffeine free.</p>
-        </article>
-        <article class="tea-card">
-          <p class="tea-card__letter">B</p>
-          <h3>Boba</h3>
-          <p>Pick any tea, add tapioca pearls, choose your milk. The Dim Sum hold-over and a fast favorite.</p>
-        </article>
-        <article class="tea-card">
-          <p class="tea-card__letter">S</p>
-          <h3>Specialty</h3>
-          <p>Pu-erh, Oolong, White Peony, seasonal blends. Ask and we will brew to your taste.</p>
-        </article>
-      </div>
-      <div class="tea-note">
-        The full list lives on the chalkboard inside the shop. Our staff loves to talk tea, so walk in and ask what is freshest.
-      </div>
+      <ul class="menu-list">
+        <li class="menu-row">
+          <h3 class="menu-row__name">Berry Blast</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Strawberry, blueberry, raspberry, banana, yogurt.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Green Goddess</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Spinach, mango, pineapple, banana, coconut water.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Peanut Butter Banana</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Classic breakfast, add a shot of espresso for a lift.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Acai Bowl</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Acai base, banana, granola, fresh berries, honey.</p>
+        </li>
+      </ul>
     </div>
 
-    <div class="menu-cat" id="smoothies">
-      <div class="menu-cat__head">
-        <h2>Smoothies &amp; Bowls</h2>
-        <span class="script">real fruit, no powders</span>
+    <div class="menu-group" id="food">
+      <div class="menu-group__head">
+        <span class="menu-group__num">No. 05</span>
+        <h2 class="menu-group__name">Food &amp; Pastries</h2>
+        <span class="menu-group__script">baked fresh</span>
       </div>
-      <p class="menu-cat__intro">Frozen fruit, whole milk or oat, honey or agave if you ask. Smoothie bowls come with granola and seasonal toppings.</p>
-      <div class="drink-grid">
-        <article class="drink-card"><h3>Berry Blast</h3><p class="drink-card__notes">Strawberry, blueberry, raspberry, banana, yogurt.</p></article>
-        <article class="drink-card"><h3>Green Goddess</h3><p class="drink-card__notes">Spinach, mango, pineapple, banana, coconut water.</p></article>
-        <article class="drink-card"><h3>Peanut Butter Banana</h3><p class="drink-card__notes">Classic breakfast, add a shot of espresso for a lift.</p></article>
-        <article class="drink-card"><h3>Acai Bowl</h3><p class="drink-card__notes">Acai base, banana, granola, fresh berries, honey.</p></article>
-      </div>
-    </div>
-
-    <div class="menu-cat" id="food">
-      <div class="menu-cat__head">
-        <h2>Food &amp; Pastries</h2>
-        <span class="script">baked fresh</span>
-      </div>
-      <p class="menu-cat__intro">Scratch pastries every morning. Toast and bowls made to order. Vegetarian friendly, mostly.</p>
-      <div class="drink-grid">
-        <article class="drink-card"><h3>Avocado Toast</h3><p class="drink-card__notes">Smashed avocado on thick-cut sourdough, flake salt, chili crunch, lemon.</p></article>
-        <article class="drink-card"><h3>Berry Scones</h3><p class="drink-card__notes">Flaky, buttery, studded with blueberries or raspberries depending on the week.</p></article>
-        <article class="drink-card"><h3>Muffins</h3><p class="drink-card__notes">Banana nut, lemon poppy seed, pumpkin in the fall.</p></article>
-        <article class="drink-card"><h3>Bagels</h3><p class="drink-card__notes">Plain, everything, or cinnamon raisin, with cream cheese or jam.</p></article>
-        <article class="drink-card"><h3>Danishes</h3><p class="drink-card__notes">Cheese, fruit, almond, whatever our baker ran with that morning.</p></article>
-        <article class="drink-card"><h3>Seasonal Cupcakes</h3><p class="drink-card__notes">A rotating flavor every week. Chocolate buttercream a house staple.</p></article>
-      </div>
+      <ul class="menu-list">
+        <li class="menu-row">
+          <h3 class="menu-row__name">Avocado Toast</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Smashed avocado on thick cut sourdough, flake salt, chili crunch, lemon.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Berry Scones</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Flaky, buttery, studded with blueberries or raspberries depending on the week.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Muffins</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Banana nut, lemon poppy seed, pumpkin in the fall.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Bagels</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Plain, everything, or cinnamon raisin, with cream cheese or jam.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Danishes</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">Cheese, fruit, almond, whatever our baker ran with that morning.</p>
+        </li>
+        <li class="menu-row">
+          <h3 class="menu-row__name">Seasonal Cupcakes</h3>
+          <div class="menu-row__rule"></div>
+          <span class="menu-row__price">[price]</span>
+          <p class="menu-row__desc">A rotating flavor every week. Chocolate buttercream a house staple.</p>
+        </li>
+      </ul>
     </div>
 
   </div>
 </section>
 
 <section class="visit-band rise" id="come-in">
-  <p class="eyebrow eyebrow--terracotta">Pull up a chair</p>
+  <p class="eyebrow eyebrow--paper">Pull up a chair</p>
   <h2>Stop by State Street.</h2>
   <p>Order at the counter, find a seat by the window, stay as long as you want.</p>
-  <a href="visit.html" class="btn btn--terracotta btn--lg">Plan Your Visit</a>
+  <a href="visit.html" class="btn btn--paper btn--lg">Plan Your Visit</a>
 </section>
 
 </main>
 
 <footer class="foot">
   <div class="foot__inner">
-    <span class="foot__brand-script">global</span>
-    <span class="foot__brand-block">Grounds Coffee</span>
-    <p class="foot__tag">Think global, drink local &middot; Since 2010</p>
-    <div class="foot__social">
+    <div>
+      <span class="foot__brand-script">global</span><br>
+      <span class="foot__brand-block">Grounds Coffee</span>
+    </div>
+    <div class="foot__links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="visit.html">Visit</a>
       <a href="https://www.facebook.com/globalgroundslax/" target="_blank" rel="noopener">Facebook</a>
       <a href="https://www.instagram.com/globalgroundslax/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.doordash.com/en/store/global-grounds-coffee-la-crosse-824665/" target="_blank" rel="noopener">Order</a>
-      <a href="https://www.google.com/maps/place/1808+State+St,+La+Crosse,+WI+54601" target="_blank" rel="noopener">Directions</a>
     </div>
-    <p class="foot__copy">&copy; 2026 Global Grounds Coffee. All rights reserved.</p>
-    <p class="foot__credit">Site by <a href="https://neonframewebdesign.com" target="_blank" rel="noopener">NeonFrame Web Design</a></p>
+    <div class="foot__legal">
+      <span>&copy; 2026 Global Grounds</span>
+      <span>Site by <a href="https://neonframewebdesign.com" target="_blank" rel="noopener">NeonFrame</a></span>
+    </div>
   </div>
 </footer>
 
