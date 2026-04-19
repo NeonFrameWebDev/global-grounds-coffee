@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Menu, Global Grounds Coffee, La Crosse WI</title>
+<meta name="description" content="Signature drinks, Bean Juice coffee, 80 plus loose leaf teas, smoothies, and scratch pastries at Global Grounds Coffee in La Crosse, Wisconsin.">
+<link rel="icon" type="image/jpeg" href="images/storefront_sign.jpg">
+<link rel="preload" as="image" href="images/food_cup_bowl.webp" fetchpriority="high" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Yellowtail&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="is-menu">
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__brand" aria-label="Global Grounds Coffee home">
+      <span class="nav__brand-script">global</span>
+      <span class="nav__brand-block">Grounds</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="about.html">About</a>
+      <a href="visit.html" class="nav__cta">Visit</a>
+    </nav>
+    <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero hero--compact" id="hero">
+  <div class="hero__bg" style="background-image: url('images/food_cup_bowl.webp')" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="hero__tagline">Something for your morning, something for your afternoon.</p>
+    <div class="hero__logo-mark">
+      <span class="hero__logo-block">The Menu</span>
+    </div>
+    <p class="hero__sub">Coffee &middot; Tea &middot; Smoothies &middot; Pastries</p>
+  </div>
+</section>
+
+<section class="section section--cream" id="lineup">
+  <div class="section__inner">
+
+    <div class="menu-note">
+      Prices are posted in the cafe and on DoorDash. Our menu rotates with the seasons and with whatever Thippi just brought in. Call us at <a href="tel:6087876590" style="color: var(--terracotta-deep); font-weight: 700;">(608) 787-6590</a> for today's board.
+    </div>
+
+    <div class="menu-cat" id="signatures">
+      <div class="menu-cat__head">
+        <h2>Signature Drinks</h2>
+        <span class="script">house favorites</span>
+      </div>
+      <p class="menu-cat__intro">The drinks regulars order without looking at the board.</p>
+      <div class="drink-grid">
+        <article class="drink-card"><p class="drink-card__cat">Tea Latte</p><h3>Iced Lavender Matcha</h3><p class="drink-card__style">matcha, lavender syrup, milk</p><p class="drink-card__notes">Whisked ceremonial matcha, a whisper of lavender, iced and pale jade.</p></article>
+        <article class="drink-card"><p class="drink-card__cat">Cold Brew</p><h3>Salted Cream Cold Brew</h3><p class="drink-card__style">cold brew, salted cream</p><p class="drink-card__notes">Slow-steeped Bean Juice beans capped with a silky salted cream.</p></article>
+        <article class="drink-card"><p class="drink-card__cat">Espresso</p><h3>Iced Caramel Macchiato</h3><p class="drink-card__style">double shot, milk, house caramel</p><p class="drink-card__notes">Bean Juice espresso, vanilla, a slow ribbon of caramel over ice.</p></article>
+        <article class="drink-card"><p class="drink-card__cat">Smoothie</p><h3>PB Banana Espresso</h3><p class="drink-card__style">peanut butter, banana, double shot</p><p class="drink-card__notes">Breakfast in a cup. Oat milk, peanut butter, banana, two shots.</p></article>
+        <article class="drink-card"><p class="drink-card__cat">Tea</p><h3>Chai with Cinnamon</h3><p class="drink-card__style">spiced chai, steamed milk, cinnamon</p><p class="drink-card__notes">Hot or iced, topped with a heavy shake of fresh cinnamon.</p></article>
+        <article class="drink-card"><p class="drink-card__cat">Boba</p><h3>Classic Boba</h3><p class="drink-card__style">tea of your choice, tapioca pearls</p><p class="drink-card__notes">Pick a tea, pick a milk, add boba. The Dim Sum inheritance.</p></article>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="coffee">
+      <div class="menu-cat__head">
+        <h2>Coffee</h2>
+        <span class="script">beans from Bean Juice</span>
+      </div>
+      <p class="menu-cat__intro">Small batch roasted in La Crosse, pulled on a La Marzocco, served the way you want it.</p>
+      <div class="drink-grid">
+        <article class="drink-card"><h3>Drip Coffee</h3><p class="drink-card__notes">Today's roast, brewed by the pot.</p></article>
+        <article class="drink-card"><h3>Pour Over</h3><p class="drink-card__notes">Single-cup V60, made to order, a touch slower.</p></article>
+        <article class="drink-card"><h3>Espresso</h3><p class="drink-card__notes">Double shot, clean and bright.</p></article>
+        <article class="drink-card"><h3>Americano</h3><p class="drink-card__notes">Double shot, hot water, no fuss.</p></article>
+        <article class="drink-card"><h3>Latte</h3><p class="drink-card__notes">Double shot, steamed milk, light foam. Vanilla, caramel, or hazelnut on request.</p></article>
+        <article class="drink-card"><h3>Cappuccino</h3><p class="drink-card__notes">Equal parts espresso, steamed milk, and foam.</p></article>
+        <article class="drink-card"><h3>Mocha</h3><p class="drink-card__notes">Double shot, house chocolate, steamed milk.</p></article>
+        <article class="drink-card"><h3>Cortado</h3><p class="drink-card__notes">Short, punchy, no sugar needed.</p></article>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="tea">
+      <div class="menu-cat__head">
+        <h2>Tea</h2>
+        <span class="script">80 plus loose leaf</span>
+      </div>
+      <p class="menu-cat__intro">The tea wall came from Dim Sum Tea Shop when it merged into Global Grounds in 2021. What follows is just a taste of the categories.</p>
+      <div class="tea-grid">
+        <article class="tea-card">
+          <p class="tea-card__letter">B</p>
+          <h3>Black</h3>
+          <p>English Breakfast, Earl Grey, Assam, Darjeeling, plus a few smoky single origins.</p>
+        </article>
+        <article class="tea-card">
+          <p class="tea-card__letter">G</p>
+          <h3>Green</h3>
+          <p>Sencha, Dragon Well, Gunpowder, Jasmine Pearls, plus a ceremonial-grade matcha we use in the latte.</p>
+        </article>
+        <article class="tea-card">
+          <p class="tea-card__letter">H</p>
+          <h3>Herbal &amp; Rooibos</h3>
+          <p>Chamomile, Peppermint, Lavender, Lemon Ginger, Vanilla Rooibos. Caffeine free.</p>
+        </article>
+        <article class="tea-card">
+          <p class="tea-card__letter">B</p>
+          <h3>Boba</h3>
+          <p>Pick any tea, add tapioca pearls, choose your milk. The Dim Sum hold-over and a fast favorite.</p>
+        </article>
+        <article class="tea-card">
+          <p class="tea-card__letter">S</p>
+          <h3>Specialty</h3>
+          <p>Pu-erh, Oolong, White Peony, seasonal blends. Ask and we will brew to your taste.</p>
+        </article>
+      </div>
+      <div class="tea-note">
+        The full list lives on the chalkboard inside the shop. Our staff loves to talk tea, so walk in and ask what is freshest.
+      </div>
+    </div>
+
+    <div class="menu-cat" id="smoothies">
+      <div class="menu-cat__head">
+        <h2>Smoothies &amp; Bowls</h2>
+        <span class="script">real fruit, no powders</span>
+      </div>
+      <p class="menu-cat__intro">Frozen fruit, whole milk or oat, honey or agave if you ask. Smoothie bowls come with granola and seasonal toppings.</p>
+      <div class="drink-grid">
+        <article class="drink-card"><h3>Berry Blast</h3><p class="drink-card__notes">Strawberry, blueberry, raspberry, banana, yogurt.</p></article>
+        <article class="drink-card"><h3>Green Goddess</h3><p class="drink-card__notes">Spinach, mango, pineapple, banana, coconut water.</p></article>
+        <article class="drink-card"><h3>Peanut Butter Banana</h3><p class="drink-card__notes">Classic breakfast, add a shot of espresso for a lift.</p></article>
+        <article class="drink-card"><h3>Acai Bowl</h3><p class="drink-card__notes">Acai base, banana, granola, fresh berries, honey.</p></article>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="food">
+      <div class="menu-cat__head">
+        <h2>Food &amp; Pastries</h2>
+        <span class="script">baked fresh</span>
+      </div>
+      <p class="menu-cat__intro">Scratch pastries every morning. Toast and bowls made to order. Vegetarian friendly, mostly.</p>
+      <div class="drink-grid">
+        <article class="drink-card"><h3>Avocado Toast</h3><p class="drink-card__notes">Smashed avocado on thick-cut sourdough, flake salt, chili crunch, lemon.</p></article>
+        <article class="drink-card"><h3>Berry Scones</h3><p class="drink-card__notes">Flaky, buttery, studded with blueberries or raspberries depending on the week.</p></article>
+        <article class="drink-card"><h3>Muffins</h3><p class="drink-card__notes">Banana nut, lemon poppy seed, pumpkin in the fall.</p></article>
+        <article class="drink-card"><h3>Bagels</h3><p class="drink-card__notes">Plain, everything, or cinnamon raisin, with cream cheese or jam.</p></article>
+        <article class="drink-card"><h3>Danishes</h3><p class="drink-card__notes">Cheese, fruit, almond, whatever our baker ran with that morning.</p></article>
+        <article class="drink-card"><h3>Seasonal Cupcakes</h3><p class="drink-card__notes">A rotating flavor every week. Chocolate buttercream a house staple.</p></article>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="visit-band rise" id="come-in">
+  <p class="eyebrow eyebrow--terracotta">Pull up a chair</p>
+  <h2>Stop by State Street.</h2>
+  <p>Order at the counter, find a seat by the window, stay as long as you want.</p>
+  <a href="visit.html" class="btn btn--terracotta btn--lg">Plan Your Visit</a>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <span class="foot__brand-script">global</span>
+    <span class="foot__brand-block">Grounds Coffee</span>
+    <p class="foot__tag">Think global, drink local &middot; Since 2010</p>
+    <div class="foot__social">
+      <a href="https://www.facebook.com/globalgroundslax/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/globalgroundslax/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.doordash.com/en/store/global-grounds-coffee-la-crosse-824665/" target="_blank" rel="noopener">Order</a>
+      <a href="https://www.google.com/maps/place/1808+State+St,+La+Crosse,+WI+54601" target="_blank" rel="noopener">Directions</a>
+    </div>
+    <p class="foot__copy">&copy; 2026 Global Grounds Coffee. All rights reserved.</p>
+    <p class="foot__credit">Site by <a href="https://neonframewebdesign.com" target="_blank" rel="noopener">NeonFrame Web Design</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
