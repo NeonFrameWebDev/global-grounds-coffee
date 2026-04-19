@@ -21,6 +21,7 @@
   function closeMenu() {
     if (!mobileMenu || !burger) return;
     mobileMenu.classList.remove('open');
+    mobileMenu.inert = true;
     burger.classList.remove('open');
     burger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
@@ -28,6 +29,7 @@
   function openMenu() {
     if (!mobileMenu || !burger) return;
     mobileMenu.classList.add('open');
+    mobileMenu.inert = false;
     burger.classList.add('open');
     burger.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';

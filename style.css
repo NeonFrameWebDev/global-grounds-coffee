@@ -305,13 +305,10 @@ hr.rule--dark { background: var(--rule); }
   transform: translate3d(0, var(--parallax-y, 0), 0);
   transition: transform 0.12s linear;
 }
-.hero__bg--home  { background-image: url('images/hero_interior-800.webp'); }
-.hero__bg--menu  { background-image: url('images/food_cup_bowl-800.webp'); }
-.hero__bg--visit { background-image: url('images/storefront_sign-800.webp'); }
 @media (min-width: 900px) {
-  .hero__bg--home  { background-image: url('images/hero_interior.webp'); }
-  .hero__bg--menu  { background-image: url('images/food_cup_bowl.webp'); }
-  .hero__bg--visit { background-image: url('images/storefront_sign.webp'); }
+  .hero__bg--home  { background-image: url('images/hero_interior.webp') !important; }
+  .hero__bg--menu  { background-image: url('images/food_cup_bowl.webp') !important; }
+  .hero__bg--visit { background-image: url('images/storefront_sign.webp') !important; }
 }
 .hero__bg::after {
   content: '';
